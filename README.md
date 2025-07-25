@@ -1,8 +1,8 @@
 # save-tools
-Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the save system, please look at [save-docs](n123git.github.io/save-docs) - and finally if you have any questions, requests or bug reports feel free to open an issue, pull request or DM me on discord (@n123original).
+Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the save system (including inner workings and data point locations), please look at [save-docs](n123git.github.io/save-docs) - and finally if you have any questions, requests or bug reports feel free to open an issue, pull request or DM me on discord (@n123original). These are **entirely** script-based so they can be used in `Node.js` projects if needed
 
 ## Tool 1: Encryption Manager
-- Used for **Yo-kai Watch 1**, **Yo-kai Watch 2**, **Yo-kai Watch Blasters**.
+- Used for **Yo-kai Watch 1**, **Yo-kai Watch 2** and **Yo-kai Watch Blasters**.
 - Functionality:
   - Checks version encryption (needed for **Yo-kai Watch 2** as encryption varies for v1 vs v2 saves) - an secondary, experimental header metadata parsing method is also provided although it **cannot** guarantee complete accuracy without further research.
     - Also has a header mode to tell if something is a valid *decrypted* `head.yw` for **Yo-kai Watch 2** and **Yo-kai Watch Blasters**.
@@ -23,3 +23,15 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
  
 ## Tool 3: Data Manager
 - Contains (YW2) data for Section Tags (Meanings of each ID), ID Data for everything from ParamIDs to locationIDs to equipped wallpapers and contact menu data.
+
+## Supported Games
+| Tool / Game            | Yo-kai Watch 1         | Yo-kai Watch 2                                 | Yo-kai Watch Blasters                                              |
+| ---------------------- | ---------------------- | ---------------------------------------------- | ------------------------------------------------------------------ |
+| **Encryption Manager** | ✅ (Base Encryption)  | ✅ (Base + Advanced Encryption, version check) | ✅ (Base + Advanced Encryption, header always required)            |
+| **SectionParser**      | ❌                    | ✅                                             | ✅                                                                 |
+| **Data Manager**       | ❌                    | ✅                                             | ⚠️ (Some overlap but full support is not currently available.)     |
+
+Key:
+- ✅ for support.
+- ⚠️ for partial support or untested (but likely support).
+- ❌ for unsupported or untested AND unlikely.
