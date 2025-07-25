@@ -5,7 +5,7 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
 - Used for **Yo-kai Watch 1**, **Yo-kai Watch 2** and **Yo-kai Watch Blasters**.
 - Functionality:
   - Checks version encryption (needed for **Yo-kai Watch 2** as encryption varies for v1 vs v2 saves); includes an W.I.P alternative - an experimental header metadata parsing method promising higher efficiency (although it **cannot** guarantee complete accuracy without further research).
-    - Also has a header mode to tell if something is a valid *decrypted* `head.yw` for **Yo-kai Watch 2** and **Yo-kai Watch Blasters**.
+    - Also has a header mode to tell if something is a *valid decrypted* `head.yw` for **Yo-kai Watch 2** and **Yo-kai Watch Blasters**.
   - Base Encryption
     - Used for **Yo-kai Watch 1** saves, and **Yo-kai Watch 2** + **Yo-kai Watch Blasters** header files (`head.yw`).
   - Advanced Encryption
