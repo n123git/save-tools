@@ -1,5 +1,5 @@
 # save-tools
-Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the save system (including inner workings and data point locations), please look at [save-docs](n123git.github.io/save-docs) - and finally if you have any questions, requests or bug reports feel free to open an issue, pull request or DM me on discord (@n123original). These are **entirely** script-based so they can be used in `Node.js` projects if needed.  [note: include minimum ES version for use]
+Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the save system (including inner workings and data point locations), please look at [save-docs](n123git.github.io/save-docs) - and finally if you have any questions, requests or bug reports feel free to open an issue, pull request or DM me on discord (@n123original). These are **entirely** script-based so they can be used in `Node.js` projects if needed.  [note: include minimum ES version for use]. Usage Examples can be found in comments at the top of the scripts.
 
 ## Tool 1: Encryption Manager
 - Used for **Yo-kai Watch 1**, **Yo-kai Watch 2** and **Yo-kai Watch Blasters**.
