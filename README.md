@@ -22,4 +22,4 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
   - Example Output: [lorem ipsum dolar sit amet]
  
 ## Tool 3: Data Manager
-- Contains (YW2) data for Section Tags (Meanings of each ID), ID Data for everything from ParamIDs to equipped wallpapers and contact menu data.
+- Contains (YW2) data for Section Tags (Meanings of each ID), ID Data for everything from ParamIDs to locationIDs to equipped wallpapers and contact menu data.
