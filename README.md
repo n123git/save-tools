@@ -13,7 +13,8 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
     - Requires a header file for Blasters saves and V2 **Yo-kai Watch 2** saves.
 
 ### Dependencies:
-- **SJCL** - Stanford Javascript Crypto Library. The Lib *is* included with the appropriate license - props to them (I originally handled AES-CCM myself but I couldn't guarantee there would be no implementation bugs).
+- **[SJCL](https://github.com/bitwiseshiftleft/sjcl)**, also known as Stanford Javascript Crypto Library. 
+  - The Lib *is* included with the appropriate license - props to them (I originally handled AES-CCM myself but I couldn't guarantee there would be no implementation bugs).
 
 ## Tool 2: SectionParser
 - Used for **Yo-kai Watch 2**, and **Yo-kai Watch Blasters**.
@@ -27,7 +28,7 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
 ## Supported Games
 | Tool / Game            | Yo-kai Watch 1                                                                      | Yo-kai Watch 2                                                 | Yo-kai Watch Blasters                                              |
 | ---------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ |
-| **Encryption Manager** | ✅ (Base Encryption)                                                                | ✅ (Base + Advanced Encryption, version check)                | ✅ (Base + Advanced Encryption, header always required)           |
+| **Encryption Manager** | ✅ (Base Encryption)                                                                | ✅ (Base + Advanced Encryption, version check)                | ⚠️ (Base + Advanced Encryption, header always required)           |
 | **SectionParser**      | ❌ (Uses direct offsets)                                                            | ✅ (Uses section parsing for header and save files).          | ✅ (Uses section parsing for header and save files).              |
 | **Data Manager**       | ⚠️ (Some overlap but full support is not currently available).| ✅ (Full Support). | ⚠️ (Some overlap but full support is not currently available). |
 
