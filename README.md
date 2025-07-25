@@ -25,11 +25,11 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
 - Contains (YW2) data for Section Tags (Meanings of each ID), ID Data for everything from ParamIDs to locationIDs to equipped wallpapers and contact menu data.
 
 ## Supported Games
-| Tool / Game            | Yo-kai Watch 1         | Yo-kai Watch 2                                 | Yo-kai Watch Blasters                                              |
-| ---------------------- | ---------------------- | ---------------------------------------------- | ------------------------------------------------------------------ |
-| **Encryption Manager** | ✅ (Base Encryption)  | ✅ (Base + Advanced Encryption, version check) | ✅ (Base + Advanced Encryption, header always required)            |
-| **SectionParser**      | ❌                    | ✅                                             | ✅                                                                 |
-| **Data Manager**       | ❌                    | ✅                                             | ⚠️ (Some overlap but full support is not currently available.)     |
+| Tool / Game            | Yo-kai Watch 1                                                                      | Yo-kai Watch 2                                                 | Yo-kai Watch Blasters                                              |
+| ---------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Encryption Manager** | ✅ (Base Encryption)                                                                | ✅ (Base + Advanced Encryption, version check)                | ✅ (Base + Advanced Encryption, header always required)           |
+| **SectionParser**      | ❌ (Uses direct offsets)                                                            | ✅ (Uses section parsing for header and save files).          | ✅ (Uses section parsing for header and save files).              |
+| **Data Manager**       | ⚠️ (Some overlap but full support is not currently available).| ✅ (Full Support). | ⚠️ (Some overlap but full support is not currently available). |
 
 Key:
 - ✅ for support.
