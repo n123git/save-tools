@@ -29,7 +29,7 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
 | Tool / Game            | Yo-kai Watch 1                                                                      | Yo-kai Watch 2                                                 | Yo-kai Watch Blasters                                              |
 | ---------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ |
 | **Encryption Manager** | ✅ (Base Encryption)                                                                | ✅ (Base + Advanced Encryption, version check)                | ⚠️ (Base + Advanced Encryption, header always required)           |
-| **SectionParser**      | ❌ (Uses direct offsets)                                                            | ✅ (Uses section parsing for header and save files).          | ✅ (Uses section parsing for header and save files).              |
+| **SectionParser**      | ❌ (Isn't needed as the game uses direct offsets)                                   | ✅ (Uses section parsing for header and save files).          | ✅ (Uses section parsing for header and save files).              |
 | **Data Manager**       | ⚠️ (Some overlap but full support is not currently available).| ✅ (Full Support). | ⚠️ (Some overlap but full support is not currently available). |
 
 Key:
