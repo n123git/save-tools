@@ -3,9 +3,23 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
 
 ## Tool 1: Encryption Manager
 - Used for **Yo-kai Watch 1**, **Yo-kai Watch 2**, **Yo-kai Watch Blasters**.
+- Functionality:
+  - Checks version encryption (needed for **Yo-kai Watch 2** as encryption varies for v1 vs v2 saves) - an secondary, experimental header metadata parsing method is also provided although it **cannot** guarantee complete accuracy without further research.
+    - Also has a header mode to tell if something is a valid *decrypted* `head.yw` for **Yo-kai Watch 2** and **Yo-kai Watch Blasters**.
+  - Base Encryption
+    - Used for **Yo-kai Watch 1** saves, and **Yo-kai Watch 2** + **Yo-kai Watch Blasters** header files (`head.yw`).
+  - Advanced Encryption
+    - Used for **Yo-kai Watch 2** saves (and Blasters saves?).
+    - Requires a header file for Blasters saves and V2 **Yo-kai Watch 2** saves.
 
 ### Dependencies:
 - **SJCL** - Stanford Javascript Crypto Library. The Lib *is* included with the appropriate license - props to them (I originally handled AES-CCM myself but I couldn't guarantee there would be no implementation bugs).
 
 ## Tool 2: SectionParser
-- Used for **Yo-kai Watch 2**, **Yo-kai Watch Blasters** ....
+- Used for **Yo-kai Watch 2**, and **Yo-kai Watch Blasters**.
+- Functionality:
+  - Safely parses and validates section trees exporting as JSON.
+  - Example Output: [lorem ipsum dolar sit amet]
+ 
+## Tool 3: Data Manager
+- Contains (YW2) data for Section Tags (Meanings of each ID), ID Data for everything from ParamIDs to equipped wallpapers and contact menu data.
