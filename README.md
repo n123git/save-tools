@@ -15,6 +15,7 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
 ### Dependencies:
 - **[SJCL](https://github.com/bitwiseshiftleft/sjcl)**, also known as Stanford Javascript Crypto Library. 
   - The Lib *is* included with the appropriate license - props to them (I originally handled AES-CCM myself but I couldn't guarantee there would be no implementation bugs).
+  - The Lib **MUST** be loaded *before* the encryption manager - otherwise things *will* break (I have added a failsafe where it'll just throw and refuse to do anything).
 
 ## Tool 2: SectionParser
 - Used for **Yo-kai Watch 2**, and **Yo-kai Watch Blasters**.
