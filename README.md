@@ -19,8 +19,7 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
 ## Tool 2: SectionParser
 - Used for **Yo-kai Watch 2**, and **Yo-kai Watch Blasters**.
 - Functionality:
-  - Safely parses and validates section trees exporting as JSON.
-  - Example Output: [lorem ipsum dolar sit amet]
+  - Parses and validates section trees by exporting them as JSON.
  
 ## Tool 3: Data Manager
 - Contains (YW2) data for Section Tags (Meanings of each ID), ID Data for everything from ParamIDs to locationIDs to equipped wallpapers and contact menu data.
