@@ -1,5 +1,5 @@
 # save-tools
-Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the save system (including inner workings and data point locations), please look at [save-docs](n123git.github.io/save-docs) - and finally if you have any questions, requests or bug reports feel free to open an issue, pull request or DM me on discord (@n123original). These are **entirely** script-based so they can be used in `Node.js` projects if needed.  [note: include minimum ES version for use]. Usage Examples can be found in comments at the top of the scripts.
+Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the save system (including inner workings and data point locations), please look at [save-docs](n123git.github.io/save-docs) - and finally if you have any questions, requests or bug reports feel free to open an issue, pull request or DM me on discord (@n123original). These are **entirely** script-based so they can be used in `Node.js` projects if needed.  [note: include minimum ES version for use]. Usage Examples can *also* be found in comments at the top of the scripts.
 
 ## Tool 1: Encryption Manager
 - Used for **Yo-kai Watch 1**, **Yo-kai Watch 2** and **Yo-kai Watch Blasters**.
@@ -11,6 +11,13 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
   - Advanced Encryption
     - Used for **Yo-kai Watch 2** saves (and Blasters saves?).
     - Requires a header file for Blasters saves and V2 **Yo-kai Watch 2** saves.
+- Examples:
+* `extractAESKey(headerData)` - An async function that accepts an encrypted head.yw (for YW2) and extracts the AES Key.
+* `DEFAULT_V1_AES_KEY` - the AES key (in a string representation of the hex) for V1 save files in Yo-kai Watch 2
+* `decryptV1Save(fileData, keyHex, dontTouchThisParam)` - An async function that accepts fileData and a key obtained from `extractAESKey`. Despite it saying v1save - this works for all YW2 Save Files.
+* `encryptV1Save(fileData)` - despite the name this encrypts any YW2 Save File using advanced encryption where fileData is a Uint8Array containing the game.ywd (ywd = decrypted .yw)
+* `fullBaseEncrypt(fileBuffer)` - An async function which uses base encryption on the file buffer (A `Uint8Array`) - this is used for head.yw's (header files) and YW1 Saves.
+* `fullBaseDecrypt(fileBuffer)` - An async function which uses base decryption on the file buffer (A `Uint8Array`) - this is used for head.yw's (header files) and YW1 Saves.
 
 ### Dependencies:
 - **[SJCL](https://github.com/bitwiseshiftleft/sjcl)**, also known as Stanford Javascript Crypto Library. 
