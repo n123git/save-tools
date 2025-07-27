@@ -12,12 +12,12 @@ Vanilla JS Save tools for the Yo-kai Watch Franchise. For documentation on the s
     - Used for **Yo-kai Watch 2** saves (and Blasters saves?).
     - Requires a header file for Blasters saves and V2 **Yo-kai Watch 2** saves.
 - Examples:
-* `extractAESKey(headerData)` - An async function that accepts an encrypted head.yw (for YW2) and extracts the AES Key.
-* `DEFAULT_V1_AES_KEY` - the AES key (in a string representation of the hex) for V1 save files in Yo-kai Watch 2
-* `decryptV1Save(fileData, keyHex, dontTouchThisParam)` - An async function that accepts fileData and a key obtained from `extractAESKey`. Despite it saying v1save - this works for all YW2 Save Files.
-* `encryptV1Save(fileData)` - despite the name this encrypts any YW2 Save File using advanced encryption where fileData is a Uint8Array containing the game.ywd (ywd = decrypted .yw)
-* `fullBaseEncrypt(fileBuffer)` - An async function which uses base encryption on the file buffer (A `Uint8Array`) - this is used for head.yw's (header files) and YW1 Saves.
-* `fullBaseDecrypt(fileBuffer)` - An async function which uses base decryption on the file buffer (A `Uint8Array`) - this is used for head.yw's (header files) and YW1 Saves.
+  * `extractAESKey(headerData)` - An async function that accepts an encrypted head.yw (for YW2) and extracts the AES Key.
+  * `DEFAULT_V1_AES_KEY` - the AES key (in a string representation of the hex) for V1 save files in Yo-kai Watch 2
+  * `decryptV1Save(fileData, keyHex, dontTouchThisParam)` - An async function that accepts fileData and a key obtained from `extractAESKey`. Despite it saying v1save - this works for all YW2 Save Files.
+  * `encryptV1Save(fileData)` - despite the name this encrypts any YW2 Save File using advanced encryption where fileData is a Uint8Array containing the game.ywd (ywd = decrypted .yw)
+  * `fullBaseEncrypt(fileBuffer)` - An async function which uses base encryption on the file buffer (A `Uint8Array`) - this is used for head.yw's (header files) and YW1 Saves.
+  * `fullBaseDecrypt(fileBuffer)` - An async function which uses base decryption on the file buffer (A `Uint8Array`) - this is used for head.yw's (header files) and YW1 Saves.
 
 ### Dependencies:
 - **[SJCL](https://github.com/bitwiseshiftleft/sjcl)**, also known as Stanford Javascript Crypto Library. 
