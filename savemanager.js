@@ -544,7 +544,7 @@ function readUint32LE(buf, offset) {
  * @param {Uint8Array} plainData - Full decrypted save data (starting with nonce/MAC/aesKey like decryptV1Save output)
  * @returns {Uint8Array} Fully re-encrypted save ready to write to file
  */
-window.encryptV1Save - async function(plainData) {
+window.encryptV1Save = async function(plainData) {
   z = showInfo;
   showInfo = console.log;
   showInfo('Starting (t1) save encryption...');
