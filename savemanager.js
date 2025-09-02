@@ -400,22 +400,6 @@ basedecryptV1 = function(buf) {
   
   return result;
 }
-// untested patch lmao
-window.baseencryptV1 = function(plainBuf, ywKey) {
-  // Encrypt using the same YWCipher (symmetric)
-  const yw = new YWCipher(ywKey >>> 0, 0x1000);
-  const enc = yw.apply(plainBuf);
-
-  // CRC over ENCRYPTED payload
-  const crc = crc32(enc);
-
-  // Build: encrypted || crc(LE) || key(LE)
-  const out = new Uint8Array(enc.length + 8);
-  out.set(enc, 0);
-  out.set(uint32ToLE(crc), enc.length);
-  out.set(uint32ToLE(ywKey >>> 0), enc.length + 4);
-  return out;
-};
 
     window.extractAESKey = async function(input) {
 
@@ -623,8 +607,6 @@ window.encryptV1Save = async function(plainData) {
 }
 
 
-
-
     async function tryDecrypt(fileData, z) {
       console.log("69a", await extractAESKey(headFileInput?.files?.[0] ?? z))
       console.log("ra445", await encryptV1Save(fileData))
@@ -689,5 +671,4 @@ window.encryptV1Save = async function(plainData) {
 
 } catch(error) {
   throw new ReferenceError("savemanager: attempted to load utilities but failed due to missing dependency SJCL") // wow fancy totally not hardcoeded XD
-
 }
